@@ -1,2 +1,2 @@
 # alx-higher_level_programming
-paython project
+paython project is mondetory project
