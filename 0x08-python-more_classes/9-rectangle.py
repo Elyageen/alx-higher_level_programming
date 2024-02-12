@@ -10,7 +10,7 @@ class Rectangle:
     Takes in args for width and height of a rectangle, and contains methods
     for calculation of the area or perimeter, and for creating a square by
     making a new instance of equal sides. __str__, __repr__, and __del__
-    fuctionality defined below.
+     defined below.
 
     Attributes:
         number_of_instances (int): counter incrementing for every
@@ -119,7 +119,7 @@ class Rectangle:
         (__height * 2).
 
         """
-        if self.__width is 0 or self.__height is 0:
+        if self.__width == 0 or self.__height == 0:
             return 0
         else:
             return (self.__width * 2) + (self.__height * 2)
@@ -140,7 +140,7 @@ class Rectangle:
         """
         str = ""
         for row in range(self.__height):
-            for col in range(self.__width):
+            for _ in range(self.__width):
                 str += "{}".format(self.print_symbol)
             if self.__width != 0 and row < (self.__height - 1):
                 str += '\n'
@@ -194,10 +194,7 @@ class Rectangle:
             raise TypeError('rect_1 must be an instance of Rectangle')
         if not isinstance(rect_2, Rectangle):
             raise TypeError('rect_2 must be an instance of Rectangle')
-        if rect_1.area() >= rect_2.area():
-            return rect_1
-        else:
-            return rect_2
+        return rect_1 if rect_1.area() >= rect_2.area() else rect_2
 
     @classmethod
     def square(cls, size=0):
