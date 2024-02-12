@@ -14,10 +14,9 @@ Attributes:
         solutions for given amount of columns checked
 
 """
-
 from sys import argv
 
-if len(argv) != 2:
+if len(argv) is not 2:
     print('Usage: nqueens N')
     exit(1)
 
@@ -32,7 +31,7 @@ if N < 4:
     exit(1)
 
 
-def board_column_gen(board=None):
+def board_column_gen(board=[]):
     """Adds a column of zeroes to the right of any board about to be tested for
     queen arrangements in that column.
 
@@ -44,8 +43,6 @@ def board_column_gen(board=None):
         modified 2D list
 
     """
-    if board is None:
-        board = []
     if len(board):
         for row in board:
             row.append(0)
