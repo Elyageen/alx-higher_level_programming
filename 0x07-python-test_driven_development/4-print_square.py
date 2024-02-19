@@ -1,4 +1,10 @@
 #!/usr/bin/python3
+
+"""
+Prints a square made of '#' characters with a given size.
+"""
+
+
 def print_square(size):
     """
         Prints a square made of '#' characters with a given size.
