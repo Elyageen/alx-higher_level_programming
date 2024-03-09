@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""function that append item an Object from a “JSON file”"""
+"""Module for appending items to a JSON file."""
 
 import sys
 save_to_json_file = __import__('5-save_to_json_file').save_to_json_file
