@@ -1,3 +1,4 @@
+-- 102-rating_shows.sql
 SELECT `title`, SUM(`rate`) AS `rating`
   FROM `tv_shows` AS t
        INNER JOIN `tv_show_ratings` AS r
